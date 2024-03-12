@@ -28,6 +28,33 @@ This script is for educational purposes only and should not be used for making f
     * Support for different data sources
     * More sophisticated neural network architectures
     * Backtesting and evaluation of prediction performance (in progress)
+ 
+## Backtesting with Python and backtesting.py
+
+This tutorial guides you through creating a basic backtesting script using the `backtesting.py` package. Backtesting allows you to evaluate the performance of trading strategies on historical data without risking real capital.
+
+### Prerequisites
+
+- `backtesting.py` package: Install using `pip install backtesting.py`
+
+### Tutorial Structure
+
+1. **Import Libraries**
+	- Import necessary libraries like `backtest` from `backtesting.py` and potentially `pandas` for data manipulation.
+1. **Define Your Strategy**
+	- Create a class inheriting from `backtesting.Strategy`.
+	- Override the `init` method to initialize strategy parameters.
+	- Override the `next` method to define your trading logic based on current price data.
+2. **Set Up Backtest**
+	- Create a `backtest` object from `backtesting.Test`.
+	- Provide historical price data (e.g., DataFrame).
+	- Specify your strategy class.
+	- Set initial capital and commission fees (optional).
+3. **Run Backtest**
+	- Call the `run` method on the `backtest` object.
+4. **Analyze Results**
+	- Access the backtest object's attributes (e.g., `pnl`, `trades`, `equity`) for performance analysis.
+	- Consider plotting relevant metrics for visualization.
 
 ### Contribution
 
