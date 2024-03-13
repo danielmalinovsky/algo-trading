@@ -56,6 +56,30 @@ This tutorial guides you through creating a basic backtesting script using the `
 	- Access the backtest object's attributes (e.g., `pnl`, `trades`, `equity`) for performance analysis.
 	- Consider plotting relevant metrics for visualization.
 
+## Backtesting streaks trading strategy with Python and backtesting.py
+
+### Assumptions
+1. Prices are moving in trends
+2. Trends are having time distribution of their length
+
+### Implementation
+1. **Create custom technical indicator "Streaks"**
+	- streaks are measuring how many time periods is price moving up or down
+2. **Identify distribution of streaks for given asset**
+	- check distribution of the streaks within given data and propose trading strategy based on it
+3. **Optimize and backtest trading strategies**
+	- backtesting.py is utilized together with custom Streaks indicator to find optimal parameters for trading strategy
+	- Parameters optimized are: streak to open short position at, streak to open long position at, streak to close position at
+4. **Investigate optimalization results**
+	- Double check optimalization results for errors. Optionally override to optimal rule
+5. **Apply to multiple assets**
+	- Script is proposed in a way that allows to scan through any asset listed at yahoo finance
+	- Thus it is possible to scan for assets that are most responsive to Streaks trading strategy
+
+### Disclaimer
+
+This script is for educational purposes only and should not be used for making financial decisions. The accuracy of the predictions cannot be guaranteed.
+
 ### Contribution
 
 We welcome contributions to this project. Feel free to fork the repository and submit pull requests with your improvements.
